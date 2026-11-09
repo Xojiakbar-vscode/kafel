@@ -1,0 +1,213 @@
+/* ============================================================
+   TILE CRAFT POS — Thermal Receipt Print Styles
+   ============================================================ */
+
+@media print {
+  /* Hide everything except receipt preview */
+  body > * {
+    display: none !important;
+  }
+
+  #receipt-print-root {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  /* Page Setup — overridden dynamically by browserPrint.ts */
+  @page {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Base receipt reset */
+  .receipt-print {
+    display: block !important;
+    background: white !important;
+    color: black !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
+
+/* ── 58 mm Template ─────────────────────────────────────── */
+.receipt-58 {
+  width: 54mm;
+  max-width: 54mm;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 7pt;
+  line-height: 1.3;
+  color: #000;
+  background: #fff;
+  padding: 2mm;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.receipt-58 .receipt-header h1 {
+  font-size: 10pt;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 1mm;
+  letter-spacing: 1px;
+}
+
+.receipt-58 .receipt-header p {
+  font-size: 6.5pt;
+  text-align: center;
+  margin: 0.5mm 0;
+}
+
+.receipt-58 .receipt-separator {
+  border: none;
+  border-top: 1px dashed #000;
+  margin: 2mm 0;
+  width: 100%;
+}
+
+.receipt-58 .receipt-info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 6.5pt;
+  margin: 0.5mm 0;
+}
+
+.receipt-58 .receipt-item {
+  margin: 1.5mm 0;
+  padding: 0;
+}
+
+.receipt-58 .receipt-item-name {
+  font-weight: bold;
+  font-size: 7pt;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.receipt-58 .receipt-item-detail {
+  font-size: 6.5pt;
+  padding-left: 2mm;
+}
+
+.receipt-58 .receipt-total-section {
+  margin-top: 1.5mm;
+}
+
+.receipt-58 .receipt-grand-total {
+  font-size: 9pt;
+  font-weight: bold;
+  text-align: center;
+  margin: 1mm 0;
+  letter-spacing: 0.5px;
+}
+
+.receipt-58 .receipt-footer {
+  text-align: center;
+  font-size: 6.5pt;
+  margin-top: 2mm;
+}
+
+/* ── 80 mm Template ─────────────────────────────────────── */
+.receipt-80 {
+  width: 76mm;
+  max-width: 76mm;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 8pt;
+  line-height: 1.4;
+  color: #000;
+  background: #fff;
+  padding: 2mm;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.receipt-80 .receipt-header h1 {
+  font-size: 13pt;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 1mm;
+  letter-spacing: 2px;
+}
+
+.receipt-80 .receipt-header p {
+  font-size: 7.5pt;
+  text-align: center;
+  margin: 0.5mm 0;
+}
+
+.receipt-80 .receipt-separator {
+  border: none;
+  border-top: 1px dashed #000;
+  margin: 2mm 0;
+  width: 100%;
+}
+
+.receipt-80 .receipt-info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 7.5pt;
+  margin: 0.5mm 0;
+}
+
+.receipt-80 .receipt-item {
+  margin: 2mm 0;
+}
+
+.receipt-80 .receipt-item-name {
+  font-weight: bold;
+  font-size: 8pt;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.receipt-80 .receipt-item-detail {
+  font-size: 7.5pt;
+  padding-left: 3mm;
+}
+
+.receipt-80 .receipt-total-section {
+  margin-top: 2mm;
+}
+
+.receipt-80 .receipt-grand-total {
+  font-size: 11pt;
+  font-weight: bold;
+  text-align: center;
+  margin: 1.5mm 0;
+  letter-spacing: 0.5px;
+}
+
+.receipt-80 .receipt-footer {
+  text-align: center;
+  font-size: 7.5pt;
+  margin-top: 2mm;
+}
+
+/* ── Shared Utilities ────────────────────────────────────── */
+.receipt-section-title {
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.receipt-label {
+  font-weight: bold;
+}
+
+.receipt-debt-row {
+  font-weight: bold;
+}
