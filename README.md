@@ -226,3 +226,4 @@ When TILE CRAFT connects to a centralized multi-terminal server:
    - Point `src/services/storage/receiptStorage.ts` to API endpoints (`POST /api/v1/receipts`, `GET /api/v1/receipts`).
 3. **Cashier Authentication**:
    - Tie seller information to JWT / session tokens rather than manual name inputs.
+# kafel
