@@ -98,5 +98,5 @@ assert(escposBytes80.length > 50, 'Scenario 13: ESC/POS 80mm binary commands gen
 console.log(`\nResults: ${passed} passed, ${failed} failed\n`);
 
 if (failed > 0) {
-  process.exit(1);
+  throw new Error(`${failed} acceptance test(s) failed`);
 }
